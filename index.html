@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="https://unpkg.com/vue@3"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="container" id="app">
+        <ul>
+            <li v-for="(mail, i) in mailList" :key="i">
+              {{ mail }}
+            </li>
+
+        </ul>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
