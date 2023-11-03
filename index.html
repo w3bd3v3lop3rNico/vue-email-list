@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container" id="app">
-        <ul>
+        <ul :class="mailList.length === 10 ? 'display' : 'hide' ">
             <li v-for="(mail, i) in mailList" :key="i">
               {{ mail }}
             </li>

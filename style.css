@@ -19,3 +19,11 @@ ol,
 menu {
     list-style: none;
 }
+
+.display {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

@@ -11,8 +11,8 @@ const { createApp } = Vue
       }
     },
     methods: {
-      fetchMail() {
-        for(let i = 0; i < 10; i++) {
+      fetchMails(number) {
+        for(let i = 0; i < number; i++) {
           axios
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((res) => {
@@ -21,14 +21,14 @@ const { createApp } = Vue
                 console.log(this.mail);
                 setTimeout(() => {
                   this.mailList.push(mail)
-                }, 3000);
+                }, 5000);
           })
         }
         console.log(this.mailList)
       },
     },
     created() {
-      this.fetchMail()
+      this.fetchMails(10)
     },
 
   }).mount('#app')
