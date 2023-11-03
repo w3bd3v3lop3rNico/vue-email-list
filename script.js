@@ -19,9 +19,8 @@ const { createApp } = Vue
                 const mail = res.data.response;
                 this.mail = mail;
                 console.log(this.mail);
-                setTimeout(() => {
-                  this.mailList.push(mail)
-                }, 5000);
+                this.mailList.push(mail)
+                
           })
         }
         console.log(this.mailList)
